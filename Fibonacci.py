@@ -23,3 +23,5 @@ elif x == 3:
     print(1)
 elif x > 2:
     fibo(x)
+else:
+    print("Unknown Operation")
