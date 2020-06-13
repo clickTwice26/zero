@@ -6,16 +6,20 @@ print(":                    code writer: 5hagat0                                
 print(":        Script Name: Website's Source Code Retriver                      :")
 print(":                Script Type:Open Source                                  :")
 print(":-------------------------------------------------------------------------:")
+
 import requests
 import os
+import webbrowser as web
+
 terminate = False
 while not terminate:
     url = input("[+]Enter The Url: ")
     
     if not url.startswith("https"):
         print("[+]Add 'http://' or 'https://' before this Url")
-        print("[+]Invalid Url")
+        print("[+]Invalid Url or Command")
         print("[+]Closing The Program")
+        
         continue
     response = requests.get(url)
     
@@ -38,6 +42,7 @@ while not terminate:
             print("[4]All in One")
             print("[5]Change Url")
             print("[6]Exit")
+            print("[7]Our Website")
             print("---------------------------------------")
         
             ftype = input("[+]Please Select: ")
@@ -90,7 +95,10 @@ while not terminate:
                 continue
             if ftype == "6":
                 terminate = True
-                continue
+                break
+            if ftype == "7":
+                web.open("https://scblog.netlify.app")
+                print("Opening")
             else:
                 print("[+]Unvalid Operation")
                 break
