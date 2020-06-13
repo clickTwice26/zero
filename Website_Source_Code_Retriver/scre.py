@@ -15,7 +15,7 @@ terminate = False
 while not terminate:
     url = input("[+]Enter The Url: ")
     
-    if not url.startswith("https"):
+    if not url.startswith("http"):
         print("[+]Add 'http://' or 'https://' before this Url")
         print("[+]Invalid Url or Command")
         print("[+]Closing The Program")
@@ -49,38 +49,38 @@ while not terminate:
             if ftype == "1":
             
                 print("[+]You have decided to save in Html")
-                fp = open("Source_Code.html", "w")
+                fp = open("Source_Code.html", "w", encoding=response.encoding)
                 fp.write(response.text)
                 fp.close()
                 print("[+]Done")
                 continue
             if ftype =="2":
                 print("Y[+]ou have decided to save in text")
-                fp = open("/shagato/Source_Code.txt", "w")
+                fp = open("/shagato/Source_Code.txt", "w", encoding=response.encoding)
                 fp.write(response.text)
                 fp.close()
                 print("[+]Done")
                 continue
             if ftype == "3":
                 print("You have decided to save in Php")
-                fp = open("Source_Code.php", "w")
+                fp = open("Source_Code.php", "w", encoding=response.encoding)
                 fp.write(response.text)
                 fp.close()
                 print("[+]Done")
                 continue
             if ftype == "4":
                 print("[+]You have decided to save in Html")
-                fp = open("Source_Code.html", "w")
+                fp = open("Source_Code.html", "w", encoding=response.encoding)
                 fp.write(response.text)
                 fp.close()
             
                 print("[+]You have decided to save in text")
-                fp = open("Source_Code.txt", "w")
+                fp = open("Source_Code.txt", "w", encoding=response.encoding)
                 fp.write(response.text)
                 fp.close()
             
                 print("[+]You have decided to save in Php")
-                fp = open("Source_Code.php", "w")
+                fp = open("Source_Code.php", "w", encoding=response.encoding)
                 fp.write(response.text)
                 fp.close()
                 print("[+]Saving")
