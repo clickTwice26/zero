@@ -3,7 +3,7 @@ print(":                        Cyber Rangers                                   
 print(":                   script code: 000000000000002                          :")
 print(":                    date created: 13/06/2020                             :")
 print(":                    code writer: 5hagat0                                 :")
-print(":        Script Name: Bangladesh's Division's Details                     :")
+print(":        Script Name: Website's Source Code Retriver                      :")
 print(":                Script Type:Open Source                                  :")
 print(":-------------------------------------------------------------------------:")
 import requests
