@@ -5,12 +5,13 @@ import shutil
 import requests
 import sys
 try:
-    print("Usage: python hd.py")
-    print("Option: -yt = For downloading Youtube Video")
-    print("        -img = For Downloading Photos")
+
+    
     yt_downloader = sys.argv[1]
     img_downloader = sys.argv[1]
     url = sys.argv[2]
+    source_code = sys.argv[1]
+    
     if yt_downloader == "-yt":
     
     
@@ -20,11 +21,35 @@ try:
             ydl_opts = {}
             with youtube_dl.YoutubeDL(ydl_opts) as ydl:
                 ydl.download([url])
-    elif img_downloader == "-yt":
-        name = input("Please Rename The Image File:")
+    elif img_downloader == "-img":
+        name = input("Please Enter The File name: ")
+        print("Select File Type")
+        print("[1]PNG")
+        print("[2]JPG")
+        print("[3]Gif")
+        type1 = input("Please Enter:")
+        if type1 == "1":
+            ext = ".png"
+        elif type1 == "2":
+            ext = ".jpg"
+        elif type1 == ".gif":
+            ext = ".gif"
+        
+            
+        
+        
+        
         response = requests.get(url)
-        with open(name, "wb") as img:
+        with open(name + ext, "wb") as img:
             img.write(response.content)
+        print("Your Image has Saved")
+    elif source_code == "-sc":
+        response = requests.get(url)
+        with open("Source_Code.txt", "w", encoding=response.encoding) as ff:
+            ff.write(response.text)
+        print("File Saved")
+    sys.exit()
+        
 except IndexError:
     print("---------------------------------------------------------------------------")
     print(":                        Cyber Rangers                                    :")
@@ -37,11 +62,13 @@ except IndexError:
     print(":-------------------------------------------------------------------------:")
     print("")
     print("")
-    print("Please Select An Option:")
-    print("[1]Youtube Video Downloader")
-    print("[2]Image Downloader")
-    print("[3]Source Code Downloader")
-    x = input("Please Select a Option:")
+    print("[+]Please Select An Option:")
+    print("")
+    print("     [1]Youtube Video Downloader")
+    print("     [2]Image Downloader")
+    print("     [3]Source Code Downloader")
+    print("")
+    x = input("[+]Please Select a Option:")
     
 
     
