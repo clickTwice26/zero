@@ -1,3 +1,4 @@
+
 from __future__ import unicode_literals
 import youtube_dl
 import urllib
@@ -152,90 +153,90 @@ except IndexError:
                 print("[+]Invalid Url or Command")
                 print("[+]Closing The Program")
         
-            continue
+                continue
             response = requests.get(url)
     
 
-        if url.startswith("https") and response.ok == True:
-            print("The Source Code")
-            print(response.text)
-            z = input("Do you want to save this file?(Y/n/exit): ")
-        if z in ["yes", "y", "Y", "Yes"]:
-            ff = True
-        else:
-            ff = False
-        while ff:
-            print("")
-            print("---------------------------------------")
-            print("[+]Please select the file types: ")
-            print("[1]Html")
-            print("[2]Text")
-            print("[3]Php")
-            print("[4]All in One")
-            print("[5]Change Url")
-            print("[6]Exit")
-            print("[7]Our Website")
-            print("---------------------------------------")
+            if url.startswith("https") and response.ok == True:
+                print("The Source Code")
+                print(response.text)
+                z = input("Do you want to save this file?(Y/n/exit): ")
+            if z in ["yes", "y", "Y", "Yes"]:
+                ff = True
+            else:
+                ff = False
+            while ff:
+                print("")
+                print("---------------------------------------")
+                print("[+]Please select the file types: ")
+                print("[1]Html")
+                print("[2]Text")
+                print("[3]Php")
+                print("[4]All in One")
+                print("[5]Change Url")
+                print("[6]Exit")
+                print("[7]Our Website")
+                print("---------------------------------------")
         
-            ftype = input("[+]Please Select: ")
-            if ftype == "1":
+                ftype = input("[+]Please Select: ")
+                if ftype == "1":
             
-                print("[+]You have decided to save in Html")
-                fp = open("Source_Code.html", "w", encoding=response.encoding)
-                fp.write(response.text)
-                fp.close()
-                print("[+]Done")
-                continue
-            if ftype =="2":
-                print("Y[+]ou have decided to save in text")
-                fp = open("/shagato/Source_Code.txt", "w", encoding=response.encoding)
-                fp.write(response.text)
-                fp.close()
-                print("[+]Done")
-                continue
-            if ftype == "3":
-                print("You have decided to save in Php")
-                fp = open("Source_Code.php", "w", encoding=response.encoding)
-                fp.write(response.text)
-                fp.close()
-                print("[+]Done")
-                continue
-            if ftype == "4":
-                print("[+]You have decided to save in Html")
-                fp = open("Source_Code.html", "w", encoding=response.encoding)
-                fp.write(response.text)
-                fp.close()
+                    print("[+]You have decided to save in Html")
+                    fp = open("Source_Code.html", "w", encoding=response.encoding)
+                    fp.write(response.text)
+                    fp.close()
+                    print("[+]Done")
+                    continue
+                if ftype =="2":
+                    print("Y[+]ou have decided to save in text")
+                    fp = open("Source_Code.txt", "w", encoding=response.encoding)
+                    fp.write(response.text)
+                    fp.close()
+                    print("[+]Done")
+                    continue
+                if ftype == "3":
+                    print("You have decided to save in Php")
+                    fp = open("Source_Code.php", "w", encoding=response.encoding)
+                    fp.write(response.text)
+                    fp.close()
+                    print("[+]Done")
+                    continue
+                if ftype == "4":
+                    print("[+]You have decided to save in Html")
+                    fp = open("Source_Code.html", "w", encoding=response.encoding)
+                    fp.write(response.text)
+                    fp.close()
             
-                print("[+]You have decided to save in text")
-                fp = open("Source_Code.txt", "w", encoding=response.encoding)
-                fp.write(response.text)
-                fp.close()
+                    print("[+]You have decided to save in text")
+                    fp = open("Source_Code.txt", "w", encoding=response.encoding)
+                    fp.write(response.text)
+                    fp.close()
             
-                print("[+]You have decided to save in Php")
-                fp = open("Source_Code.php", "w", encoding=response.encoding)
-                fp.write(response.text)
-                fp.close()
-                print("[+]Saving")
-                print("[+]Saving.")
-                print("[+]Saving..")
-                print("[+]Saving...")
-                print("[+]Saving....")
-                print("[+]Saved")
-                continue
-            if ftype == "5":
-                url = input("[+]Enter The Url: ")
-                continue
-            if ftype in ["exit", "Exit", "6"]:
-                print("Exiting.")
-                print("Exiting..")
-                print("Exiting...")
-                print("Exiting....")
-                print("Exiting.....")
-                print("Exiting......")
-                print("Exiting.......")
-                print("Exiting........")
-                print("Exiting.........")
-                print(
+                    print("[+]You have decided to save in Php")
+                    fp = open("Source_Code.php", "w", encoding=response.encoding)
+                    fp.write(response.text)
+                    fp.close()
+                    print("[+]Saving")
+                    print("[+]Saving.")
+                    print("[+]Saving..")
+                    print("[+]Saving...")
+                    print("[+]Saving....")
+                    print("[+]Saved")
+                    continue
+                if ftype == "5":
+                    url = input("[+]Enter The Url: ")
+                    continue
+                if ftype in ["exit", "Exit", "6"]:
+                    print("Exiting.")
+                    print("Exiting..")
+                    print("Exiting...")
+                    print("Exiting....")
+                    print("Exiting.....")
+                    print("Exiting......")
+                    print("Exiting.......")
+                    print("Exiting........")
+                    print("Exiting.........")
+                    print(
                 '''
 _______________██████████
 _____________█████████████
@@ -287,15 +288,15 @@ __██________________███████
 █___________________█████████████
 ''')
 
-                print("[+]Closing This program")
-                terminate = True
-                break
-            if ftype == "7":
-                web.open("https://scblog.netlify.app")
-                print("Opening")
-            else:
-                print("[+]Unvalid Operation")
-                break
+                    print("[+]Closing This program")
+                    terminate = True
+                    break
+                if ftype == "7":
+                    web.open("https://scblog.netlify.app")
+                    print("Opening")
+                else:
+                    print("[+]Unvalid Operation")
+                    break
             
         
 
