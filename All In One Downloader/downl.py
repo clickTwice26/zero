@@ -24,10 +24,13 @@ try:
                 ydl.download([url])
     elif img_downloader == "-img":
         name = input("Please Enter The File name: ")
-        print("Select File Type")
-        print("[1]PNG")
-        print("[2]JPG")
-        print("[3]Gif")
+        print(":---------------------:")
+        print(":[+]Select File Type  :")
+        print(":---------------------:")
+        print(":    [1]PNG           :")
+        print(":    [2]JPG           :")
+        print(":    [3]Gif           :")
+        print(":---------------------:")
         type1 = input("Please Enter:")
         if type1 == "1":
             ext = ".png"
@@ -62,13 +65,13 @@ except IndexError:
     print(":           Youtube Video | Image | Website Source Code                   :")
     print(":-------------------------------------------------------------------------:")
     print("")
-    print("")
-    print("[+]Please Select An Option:")
-    print("")
-    print("     [1]Youtube Video Downloader")
-    print("     [2]Image Downloader")
-    print("     [3]Source Code Downloader")
-    print("")
+    print(":--------------------------------------:")
+    print(":    [+]Please Select An Option:       :")
+    print(":--------------------------------------:")
+    print(":     [1]Youtube Video Downloader      :")
+    print(":     [2]Image Downloader              :")
+    print(":     [3]Source Code Downloader        :")
+    print(":--------------------------------------:")
     x = input("[+]Please Select a Option:")
     
 
@@ -95,11 +98,14 @@ except IndexError:
         while True:
             url = input("Paste image URL: ")
             pic_name = input("Enter Image name: ")
-            print("Select File Type")
-            print("[1]PNG")
-            print("[2]JPG")
-            print("[3]Gif")
-            print("[4]Change Url")
+            print(":----------------------------:")
+            print(":   [+]Select File Type      :")
+            print(":----------------------------:")
+            print(":        [1]PNG              :")
+            print(":        [2]JPG              :")
+            print(":        [3]Gif              :")
+            print(":        [4]Change Url       :")
+            print(":----------------------------:")
             terminate = False
 
             while not terminate:
@@ -158,8 +164,8 @@ except IndexError:
     
 
             if url.startswith("https") and response.ok == True:
-                print("The Source Code")
-                print(response.text)
+                print("The Source Code Loaded")
+                
                 z = input("Do you want to save this file?(Y/n/exit): ")
             if z in ["yes", "y", "Y", "Yes"]:
                 ff = True
@@ -167,16 +173,17 @@ except IndexError:
                 ff = False
             while ff:
                 print("")
-                print("---------------------------------------")
-                print("[+]Please select the file types: ")
-                print("[1]Html")
-                print("[2]Text")
-                print("[3]Php")
-                print("[4]All in One")
-                print("[5]Change Url")
-                print("[6]Exit")
-                print("[7]Our Website")
-                print("---------------------------------------")
+                print(":--------------------------------------:")
+                print(":[+]Please select the file types:      :")
+                print(":--------------------------------------:")
+                print(":        [1]Html                       :")
+                print(":        [2]Text                       :")
+                print(":        [3]Php                        :")
+                print(":        [4]All in One                 :")
+                print(":        [5]Change Url                 :")
+                print(":        [6]Exit                       :")
+                print(":        [7]Our Website                :")
+                print("---------------------------------------:")
         
                 ftype = input("[+]Please Select: ")
                 if ftype == "1":
@@ -188,11 +195,13 @@ except IndexError:
                     print("[+]Done")
                     continue
                 if ftype =="2":
-                    print("Y[+]ou have decided to save in text")
+                    print("[+]You have decided to save in text")
                     fp = open("Source_Code.txt", "w", encoding=response.encoding)
+                    
                     fp.write(response.text)
                     fp.close()
                     print("[+]Done")
+                    
                     continue
                 if ftype == "3":
                     print("You have decided to save in Php")
