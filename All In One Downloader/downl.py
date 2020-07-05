@@ -5,7 +5,9 @@ import urllib
 import shutil
 import requests
 import sys
+import os
 try:
+
 
     
     yt_downloader = sys.argv[1]
@@ -59,6 +61,7 @@ except IndexError:
     print(":                        Cyber Rangers                                    :")
     print(":                   script code: 000000000000004                          :")
     print(":                    date created: 22/06/2020                             :")
+    print(":                    last updated: 05/07/2020                             :")
     print(":                    code writer: 5hagat0                                 :")
     print(":        Script Name: All In One Downloader                               :")
     print(":                Script Type:Open Source                                  :")
@@ -71,6 +74,9 @@ except IndexError:
     print(":     [1]Youtube Video Downloader      :")
     print(":     [2]Image Downloader              :")
     print(":     [3]Source Code Downloader        :")
+    print(":     [4]Requirements                  :")   
+    print(":If you are using this tool first time :")
+    print(":please satisfy REQUIREMENTS this tool :")
     print(":--------------------------------------:")
     x = input("[+]Please Select a Option:")
     
@@ -144,7 +150,9 @@ except IndexError:
                     print("Image Details:")
                     print(f"Name:{pic_name}|Format:{form}")
                     print("-------------------------------------")
-
+    elif x == "4":
+        os.system("pip install -r requirements.txt")
+        os.system("python downl.py")
     elif x == "3":
         import requests
         import os
