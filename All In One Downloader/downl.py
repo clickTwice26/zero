@@ -1,18 +1,20 @@
 
-from __future__ import unicode_literals
-import youtube_dl
-import urllib
-import shutil
-import requests
-import sys
-import os
+
 try:
+	from __future__ import unicode_literals
+	import youtube_dl
+	import urllib
+	import shutil
+	import requests
+	import sys
+	import os
+	import webbrowser as wb
 
 
     
     yt_downloader = sys.argv[1]
     img_downloader = sys.argv[1]
-    url = sys.argv[2]
+	curl = sys.argv[2]
     source_code = sys.argv[1]
     
     if yt_downloader == "-yt":
@@ -57,6 +59,14 @@ try:
     sys.exit()
         
 except IndexError:
+	from __future__ import unicode_literals
+
+	import urllib
+	import shutil
+	
+	import sys
+	import os
+	import webbrowser as wb
     print("---------------------------------------------------------------------------")
     print(":                        Cyber Rangers                                    :")
     print(":                   script code: 000000000000004                          :")
@@ -75,11 +85,14 @@ except IndexError:
     print(":     [2]Image Downloader              :")
     print(":     [3]Source Code Downloader        :")
     print(":     [4]Requirements                  :")   
+    print(":     [5]Update                        :")
     print(":If you are using this tool first time :")
     print(":please satisfy REQUIREMENTS this tool :")
+   
     print(":--------------------------------------:")
     x = input("[+]Please Select a Option:")
-    
+    import youtube_dl
+    import requests
 
     
     if x == "1":
@@ -115,7 +128,7 @@ except IndexError:
             terminate = False
 
             while not terminate:
-                file_format = input("Please Enter Your Option: ")
+                file_format = input("[+]Please Enter Your Option: ")
 
                 if file_format in ["png", "Png", "1", "PNG"]:
                     x = ".png"
@@ -153,6 +166,7 @@ except IndexError:
     elif x == "4":
         os.system("pip install -r requirements.txt")
         os.system("python downl.py")
+
     elif x == "3":
         import requests
         import os
