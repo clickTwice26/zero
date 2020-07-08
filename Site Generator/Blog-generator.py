@@ -19,6 +19,7 @@ if __name__ == "__main__":
             date = input("[+]Date: ")
             month = input("[+]Month: ")
             year = input("[+]Year: ")
+            blog_number = input("[+]Blog Number: ")
             main_file_name = file_name + ".html"
             fp = open("blog.txt", "r", encoding="utf-8").read()
 
@@ -31,7 +32,7 @@ if __name__ == "__main__":
     
             blog2 = f"""
       <div id="content">
-      <h1><a href="{file_name}" id="intro">[5]<b>{title}</b></a></h1>
+      <h1><a href="{file_name}" id="intro">[{blog_number}]<b>{title}</b></a></h1>
 <p align="center">::::Posted on {date}|{month}|{year}::::::</p>
 
     <p style="font-family: sans-serif" align="center"><font size ="2">{description}
@@ -140,11 +141,12 @@ body {
                     fd.write(main_file)
             if conf in ["No", "no"]:
                 print("Ok")
-                print("Resetted")
+                print("[!]Resetted[!]")
                 sys.exit()
 
             print("[+]Copy that for Blog2")
             print(blog2)
+            os.system("I:\Github\scblog\blog2.html")
             print("[+]Do You Want To Publish?")
             publish_conf = input("| Yes | No | : ")
             if publish_conf in ["Yes", "yes"]:
@@ -168,15 +170,22 @@ body {
             s = fp_Q.replace("\n", "<br>")
             my_quotes = f"""
                           <div id="content">
-                <h1><a href="#intro" id="intro">{quote_no}</a></h1>
+                <h1><a href="#intro" id="intro">[{quote_no}]</a></h1>
                   <font size="3">
             <p align="center">{s}</p>
 
-            </font>"""
+            </font>
+            </div>"""
             print(":------------------------------------------------------------------------------:")
             print(my_quotes)
             print(":------------------------------------------------------------------------------:")
+             
+            
+            
+            os.system("notepad I:\Github\scblog\Quote\QuotePage1.html")
+
             publish_c = input("Do you want to publish now?(Yes/No): ")
+
             if publish_c in ["yes", "Yes"]:
                 os.system("sh submit.sh")
                 print("[+]submited successfully")
@@ -186,6 +195,7 @@ body {
                     ss = about.read()
                     print(ss)
             except FileNotFoundError:
+                os.system("mkdir blog.txt")
                 print("There are a Blog.txt.You Have to fill your Blog there at first")
 
 
