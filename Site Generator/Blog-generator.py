@@ -3,11 +3,12 @@ if __name__ == "__main__":
     from pathlib import Path
     import os
     import sys
-    print("[+]Select An Option:")
-    print("[1] Blog ")
-    print("[2] My Quotes ")
-    print("[3] Publish")
-    print("[4] How To use")
+    print(" [+]Select An Option:")
+    print(" [1] Blog ")
+    print(" [2] My Quotes ")
+    print(" [3] Publish")
+    print(" [4] How To use")
+    print(" [5] Channel Video")
     option = input("[+]Please Enter Your Option: ")
     try:
         if option == "1":
@@ -148,6 +149,8 @@ body {
             print(blog2)
             os.system("I:\Github\scblog\blog2.html")
             print("[+]Do You Want To Publish?")
+            print("----------------------------")
+
             publish_conf = input("| Yes | No | : ")
             if publish_conf in ["Yes", "yes"]:
                 print("[+]Publishing")
@@ -197,7 +200,35 @@ body {
             except FileNotFoundError:
                 os.system("mkdir blog.txt")
                 print("There are a Blog.txt.You Have to fill your Blog there at first")
+        if option == "5":
+            video_title = input("Video Titile: ")
+            video_link = input(" [+] Video Link: ")
+            z = 0
+            D = "{"
+            E = "}"
+            url = video_link[32:]
+            channel_str = f"""
+
+<div id="content">
+    <h1><a href="{video_link}" id="intro">{video_title}</a></h1>
+      <div style="overflow:hidden;position: relative;">
+      <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="333" height="200" type="text/html" src="https://www.youtube.com/embed/{url}?autoplay=1&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&vq=large">
+      </iframe><div style="position: absolute;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;"><small style="line-height: 1.8;font-size: 0px;background: #fff;"> <a href="https://logen.com.au/">logen</a> </small></div><style>.newst{D}position:relative;text-align:right;height:420px;width:520px;{E} #gmap_canvas img{D}max-width:none!important;background:none!important{E}</style></div><br /></div>
+"""
+            print("-------------------------------------------------------------")
+
+            print(channel_str)
 
 
-    except NameError:
-        print("[!]Please Enter a Valid Input[!]")
+            print("-------------------------------------------------------------")
+            os.system("notepad I:\Github\scblog\channel.html")
+            print("Saved SuccessFully")
+            os.system("sh submit.sh")
+            print("Published SuccessFully")
+            
+            
+    except:
+        print("Please input Valid Operation")
+
+
+
