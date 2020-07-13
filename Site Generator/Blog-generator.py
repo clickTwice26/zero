@@ -1,14 +1,27 @@
 if __name__ == "__main__":
+    print("---------------------------------------------------------------------------")
+    print(":                        Cyber Rangers                                    :")
+    print(":                   script code: 000000000000004                          :")
+    print(":                    date created: idontknow                              :")
+    print(":                    code writer: 5hagat0                                 :")
+    print(":              Script Name: automated site generator                      :")
+    print(":                Script Type: For inspiration and For My personal usage   :")
+    print(":-------------------------------------------------------------------------:")
+
+
 
     from pathlib import Path
     import os
     import sys
+    import webbrowser
+
     print(" [+]Select An Option:")
     print(" [1] Blog ")
     print(" [2] My Quotes ")
     print(" [3] Publish")
     print(" [4] How To use")
     print(" [5] Channel Video")
+    print(" [6] Visit My website ")
     option = input("[+]Please Enter Your Option: ")
     try:
         if option == "1":
@@ -225,7 +238,10 @@ body {
             print("Saved SuccessFully")
             os.system("sh submit.sh")
             print("Published SuccessFully")
-            
+        if option == "6":
+            print("Visiting  My  Website")
+            webbrowser.open("https://scblog.netlify.app")
+            print("[!]Website opened")
             
     except:
         print("Please input Valid Operation")
